@@ -75,6 +75,10 @@ public abstract class WeightedList<T> {
 		return new LinearSearch<>(elements);
 	}
 
+	public static <T> Builder<T> builder() {
+		return new Builder<>();
+	}
+
 	public static class Builder<T> {
 		private final List<WeightedElement<T>> list = new ArrayList<>();
 
